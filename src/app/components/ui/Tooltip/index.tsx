@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Tooltip } from "@base-ui-components/react/tooltip";
+import { motion } from "framer-motion";
 
 import styles from "./style.module.css";
 
@@ -27,14 +28,20 @@ const CustomTooltip: React.FC<TooltipProps> = ({
   showExternalIcon = true,
 }) => {
   const triggerContent = text ? (
-    <a
+    <motion.a
       href={href}
       target={href ? "_blank" : undefined}
       className="text-[var(--muted-foreground)] text-[15px] decoration-[1px] underline underline-offset-3 decoration-[var(--muted-foreground)] cursor-pointer group inline-flex items-center"
+      whileHover="hover"
+      initial="initial"
+      variants={{
+        initial: {},
+        hover: {},
+      }}
     >
       {text}
       {href && showExternalIcon && (
-        <svg
+        <motion.svg
           className="w-3 h-3 ml-0.5 inline-block"
           viewBox="0 0 24 24"
           fill="none"
@@ -42,12 +49,27 @@ const CustomTooltip: React.FC<TooltipProps> = ({
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          variants={{
+            initial: {
+              x: 0,
+              y: 0,
+            },
+            hover: {
+              x: 2,
+              y: -2,
+            },
+          }}
+          transition={{
+            type: "tween",
+            duration: 0.2,
+            ease: "easeOut",
+          }}
         >
           <line x1="7" y1="17" x2="17" y2="7"></line>
           <polyline points="7 7 17 7 17 17"></polyline>
-        </svg>
+        </motion.svg>
       )}
-    </a>
+    </motion.a>
   ) : (
     children
   );
