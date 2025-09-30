@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Tooltip } from "@base-ui-components/react/tooltip";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -75,15 +76,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="relative">
-          <div className="relative mx-auto max-w-screen-xl">
-            <div className="absolute left-8 top-0 bottom-0 border-l border-dotted border-[var(--border)] border-opacity-40 h-full overflow-hidden"></div>
+        <Tooltip.Provider>
+          <div className="relative">
+            <div className="relative mx-auto max-w-screen-xl">
+              <div className="absolute left-8 top-0 bottom-0 border-l border-dotted border-[var(--border)] border-opacity-40 h-full overflow-hidden"></div>
 
-            <div className="absolute right-8 top-0 bottom-0 border-l border-dotted border-[var(--border)] border-opacity-40 h-full overflow-hidden"></div>
+              <div className="absolute right-8 top-0 bottom-0 border-l border-dotted border-[var(--border)] border-opacity-40 h-full overflow-hidden"></div>
 
-            <div className="px-[34px]">{children}</div>
+              <div className="px-[34px] root">{children}</div>
+            </div>
           </div>
-        </div>
+        </Tooltip.Provider>
       </body>
     </html>
   );
