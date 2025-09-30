@@ -94,6 +94,17 @@ a:hover {
   color: var(--link-foreground);
   text-decoration: underline;
 }
+
+/* Text selection styles */
+::selection {
+  background: #171717; 
+  color: #ffffff; 
+}
+
+.dark ::selection {
+  background: #ffffff; 
+  color: #0a0a0a; 
+}
 /* Global overflow settings to ensure card visibility */
 html, body {
   overflow-x: visible !important;
