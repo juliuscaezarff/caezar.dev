@@ -29,11 +29,12 @@ This project is under MIT license
 
 - [ ] Create copy
 - [ ] Add micro-animations
-- [ ] Add baseUI libary
+- [ X ] Add baseUI libary
 - [ ] Add projects
 
 #### Todo configs
 
+- [ ] Refactor project
 - [ ] Remove eslint
 - [ ] Add biomejs
 
