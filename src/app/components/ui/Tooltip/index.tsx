@@ -31,7 +31,7 @@ const CustomTooltip: React.FC<TooltipProps> = ({
     <motion.a
       href={href}
       target={href ? "_blank" : undefined}
-      className="text-[var(--muted-foreground)] text-[15px] decoration-[1px] underline underline-offset-3 decoration-[var(--muted-foreground)] cursor-pointer group inline-flex items-center"
+      className=" text-[var(--muted-foreground)] decoration-[1px] underline dotted underline-offset-3 decoration-[var(--muted-foreground)] cursor-pointer group inline-flex items-center"
       whileHover="hover"
       initial="initial"
       variants={{
