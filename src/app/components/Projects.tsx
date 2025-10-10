@@ -5,10 +5,11 @@ import { ProjectItem } from "./ui/ProjectItem";
 
 const projects = [
   {
-    title: "RetroUI",
-    link: "https://retroui.io",
-    logo: "/projects/retroui.webp",
-    description: "A pixelated retro-style UI component library for websites.",
+    title: "HelpMind",
+    link: "https://helpmind.com.br",
+    logo: "/projects/helpmind.png",
+    description:
+      "Online platform for psychologists with scheduling, sessions, and insights.",
     preview: "/projects/retroui-preview.png",
   },
   {
@@ -19,29 +20,28 @@ const projects = [
     preview: "/projects/writingpad-preview.mov",
   },
   {
-    title: "Wave Rider",
+    title: "Troko",
     link: "https://marketplace.visualstudio.com/items?itemName=dakshie.waverider",
-    logo: "/projects/waverider.png",
+    logo: "/projects/troko.png",
     description:
-      "A mini surfing game that one can play in VS Code while coding.",
+      "Smart finance hub with AI expense tracking and custom categories.",
     preview: "/projects/waverider-preview.mov",
   },
   {
-    title: "Jobwrite",
+    title: "Daility",
     link: "https://github.com/Dksie09/jobwriteYT",
-    logo: "/projects/jobwrite.png",
-    description:
-      "Smart job search assistant. scans your github and finds jobs for you.",
+    logo: "/projects/daility.jpg",
+    description: "Online planner for students with tasks and Pomodoro focus.",
     preview: "/projects/jobwrite-preview.gif",
   },
-  {
-    title: "Docsy",
-    link: "https://github.com/Dksie09/Docsy",
-    logo: "/projects/docsy.png",
-    description:
-      "A smart extension that skims through the documentation for you, and delivers you the exact parts you were looking for.",
-    preview: "/projects/docsy-preview.mp4",
-  },
+  // {
+  //   title: "Docsy",
+  //   link: "https://github.com/Dksie09/Docsy",
+  //   logo: "/projects/docsy.png",
+  //   description:
+  //     "A smart extension that skims through the documentation for you, and delivers you the exact parts you were looking for.",
+  //   preview: "/projects/docsy-preview.mp4",
+  // },
 ];
 
 const Projects: React.FC = () => {
