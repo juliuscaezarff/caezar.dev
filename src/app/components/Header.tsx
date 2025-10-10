@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "../theme-provider";
+import { MoonIcon } from "./ui/icons/moon";
+import { SunIcon } from "./ui/icons/sun";
+import Image from "next/image";
 
 function Header() {
   const { theme, setTheme } = useTheme();
@@ -39,7 +42,14 @@ function Header() {
     <div>
       <div className="flex justify-between items-center p-3 w-full z-20">
         <div className="flex items-center">
-          <div className="text-base text-[var(--primary)]">Julius Caezar</div>
+          {/* <div className="text-base text-[var(--primary)]">Julius Caezar</div> */}
+          <Image
+            src="/obby-logo-transparent.webp"
+            alt="Julius Caezar"
+            width={32}
+            height={32}
+            // className="mr-2"
+          />
         </div>
 
         <div className="flex items-center gap-4">
@@ -50,9 +60,9 @@ function Header() {
             aria-label="Toggle theme"
           >
             {theme === "light" ? (
-              <Moon className="h-[18px] w-[18px] text-[var(--muted-foreground)]" />
+              <MoonIcon className="text-[var(--muted-foreground)]" />
             ) : (
-              <Sun className="h-[18px] w-[18px] text-[var(--muted-foreground)]" />
+              <SunIcon className="text-[var(--muted-foreground)]" />
             )}
           </button>
         </div>
