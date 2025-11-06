@@ -166,15 +166,15 @@ function Band({
   // First cast to unknown, then to CustomGLTFResult to avoid TypeScript casting errors
   const gltf = useGLTF(
     process.env.NODE_ENV === "development"
-      ? "http://localhost:3000/Dakshie.glb"
-      : "https://dakshie.xyz/Dakshie.glb"
+      ? "http://localhost:3000/julius.glb"
+      : "https://caezar.vercel.app/julius.glb"
   );
   const { nodes, materials } = gltf as unknown as CustomGLTFResult;
 
   const texture = useTexture(
     process.env.NODE_ENV === "development"
-      ? "http://localhost:3000/band.png"
-      : "https://dakshie.xyz/band.png"
+      ? "http://localhost:3000/band.jpg"
+      : "https://caezar.vercel.app/band.jpg"
   );
   const { width, height } = useThree((state) => state.size);
   const [curve] = useState(
@@ -197,14 +197,10 @@ function Band({
   const cardRef = card as unknown as React.RefObject<RapierRigidBody>;
 
   // Using slightly longer rope distances to reduce tension
-  useRopeJoint(fixedRef, j1Ref, [[0, 0, 0], [0, 0, 0], 0.8]); // Increased from 1
-  useRopeJoint(j1Ref, j2Ref, [[0, 0, 0], [0, 0, 0], 0.8]); // Increased from 1
-  useRopeJoint(j2Ref, j3Ref, [[0, 0, 0], [0, 0, 0], 0.8]); // Increased from 1
-  useSphericalJoint(j3Ref, cardRef, [
-    [0, 0, 0],
-    [0, 2.35, 0],
-  ]);
-
+  useRopeJoint(fixedRef, j1Ref, [[0, 0, 0], [0, 0, 0], 1]) // prettier-ignore
+  useRopeJoint(j1Ref, j2Ref, [[0, 0, 0], [0, 0, 0], 1]) // prettier-ignore
+  useRopeJoint(j2Ref, j3Ref, [[0, 0, 0], [0, 0, 0], 1]) // prettier-ignore
+  useSphericalJoint(j3Ref, cardRef, [[0, 0, 0], [0, 1.45, 0]]) // prettier-ignore
   useEffect(() => {
     if (hovered) {
       document.body.style.cursor = dragged ? "grabbing" : "grab";
@@ -232,9 +228,9 @@ function Band({
       }
 
       card.current.setNextKinematicTranslation({
-        x: vec.x - dragged.x,
-        y: vec.y - dragged.y,
-        z: vec.z - dragged.z,
+        x: vec.x - (dragged as THREE.Vector3).x,
+        y: vec.y - (dragged as THREE.Vector3).y,
+        z: vec.z - (dragged as THREE.Vector3).z,
       });
     }
 
@@ -296,7 +292,7 @@ function Band({
 
   return (
     <>
-      <group position={[position[0], position[1] + 4, position[2]]}>
+      <group position={[0, 4, 0]}>
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
         <RigidBody position={[0.5, 0, 0]} ref={j1} {...segmentProps}>
           <BallCollider args={[0.1]} />
@@ -315,7 +311,7 @@ function Band({
         >
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
-            scale={3}
+            scale={2.25}
             position={[0, -1.2, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}

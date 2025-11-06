@@ -3,13 +3,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-// import Card from "./components/Card";
 import { ThemeProvider } from "./theme-provider";
 import Projects from "./components/Projects";
 import Work from "./components/Work";
-import Card2 from "./components/Card2";
 import Footer from "./components/Footer";
 import { Writing } from "./components/Writing";
+import Card from "./components/Card";
 
 export default function Home() {
   const [cardHeight, setCardHeight] = useState("100vh");
@@ -64,8 +63,7 @@ export default function Home() {
         className="card-wrapper mr-10 hidden lg:block"
         style={{ height: cardHeight, position: "absolute", top: 0, right: 0 }}
       >
-        {/* <Card /> */}
-        {/* <Card2 /> */}
+        <Card />
       </div>
 
       <div className="relative flex-1">
