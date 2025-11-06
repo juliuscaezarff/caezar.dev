@@ -25,7 +25,7 @@ const projects = [
     logo: "/projects/troko.png",
     description:
       "Smart finance hub with AI expense tracking and custom categories.",
-    preview: "/projects/waverider-preview.mov",
+    preview: "/projects/troko-preview.png",
   },
   {
     title: "Daility",
