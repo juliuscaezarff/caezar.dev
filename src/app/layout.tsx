@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Julius Caezar",
     description: "Developer building ideas",
-    url: "https://dakshie.xyz/",
+    url: "https://caezar.vercel.app/",
     siteName: "Julius Caezar",
     images: [
       {
