@@ -92,10 +92,10 @@ export default function Home() {
         >
           <Work />
         </div>
-        <hr className="border-t border-dotted relative w-screen left-[50%] right-[50%] -translate-x-[50%] my-8" />
+        {/* <hr className="border-t border-dotted relative w-screen left-[50%] right-[50%] -translate-x-[50%] my-8" />
         <div className="relative w-full z-0" ref={writingRef} id="writing">
           <Writing />
-        </div>
+        </div> */}
         <hr className="border-t border-dotted relative w-screen left-[50%] right-[50%] -translate-x-[50%] my-8" />
         <Footer />
       </div>
