@@ -8,7 +8,7 @@ import styles from "./style.module.css";
 
 interface TooltipProps {
   children?: React.ReactNode;
-  content: React.ReactNode;
+  content?: React.ReactNode;
   imageUrl?: string;
   side?: "top" | "right" | "bottom" | "left";
   sideOffset?: number;
@@ -28,48 +28,62 @@ const CustomTooltip: React.FC<TooltipProps> = ({
   showExternalIcon = true,
 }) => {
   const triggerContent = text ? (
-    <motion.a
-      href={href}
-      target={href ? "_blank" : undefined}
-      className=" text-[var(--muted-foreground)] decoration-[1px] underline dotted underline-offset-3 decoration-[var(--muted-foreground)] cursor-pointer group inline-flex items-center"
-      whileHover="hover"
-      initial="initial"
-      variants={{
-        initial: {},
-        hover: {},
-      }}
-    >
-      {text}
-      {href && showExternalIcon && (
-        <motion.svg
-          className="w-3 h-3 ml-0.5 inline-block"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          variants={{
-            initial: {
-              x: 0,
-              y: 0,
-            },
-            hover: {
-              x: 2,
-              y: -2,
-            },
-          }}
-          transition={{
-            type: "tween",
-            duration: 0.2,
-            ease: "easeOut",
-          }}
-        >
-          <line x1="7" y1="17" x2="17" y2="7"></line>
-          <polyline points="7 7 17 7 17 17"></polyline>
-        </motion.svg>
-      )}
-    </motion.a>
+    href ? (
+      <motion.a
+        href={href}
+        target="_blank"
+        className="text-[var(--muted-foreground)] decoration-[1px] underline dotted underline-offset-3 decoration-[var(--muted-foreground)] group inline-flex items-center hover:text-[var(--link-foreground)]"
+        whileHover="hover"
+        initial="initial"
+        variants={{
+          initial: {},
+          hover: {},
+        }}
+      >
+        {text}
+        {href && showExternalIcon && (
+          <motion.svg
+            className="w-3 h-3 ml-0.5 inline-block"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            variants={{
+              initial: {
+                x: 0,
+                y: 0,
+              },
+              hover: {
+                x: 2,
+                y: -2,
+              },
+            }}
+            transition={{
+              type: "tween",
+              duration: 0.2,
+              ease: "easeOut",
+            }}
+          >
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </motion.svg>
+        )}
+      </motion.a>
+    ) : (
+      <motion.span
+        className="text-[var(--muted-foreground)] decoration-[1px] underline dotted underline-offset-3 decoration-[var(--muted-foreground)] group inline-flex items-center"
+        whileHover="hover"
+        initial="initial"
+        variants={{
+          initial: {},
+          hover: {},
+        }}
+      >
+        {text}
+      </motion.span>
+    )
   ) : (
     children
   );
