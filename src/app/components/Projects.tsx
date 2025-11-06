@@ -10,7 +10,7 @@ const projects = [
     logo: "/projects/helpmind.png",
     description:
       "Online platform for psychologists with scheduling, sessions, and insights.",
-    preview: "/projects/retroui-preview.png",
+    preview: "/projects/helpmind-preview.png",
   },
   {
     title: "Writingpad",
@@ -29,10 +29,10 @@ const projects = [
   },
   {
     title: "Daility",
-    link: "https://github.com/Dksie09/jobwriteYT",
+    link: "https://daility.vercel.app/",
     logo: "/projects/daility.jpg",
     description: "Online planner for students with tasks and Pomodoro focus.",
-    preview: "/projects/jobwrite-preview.gif",
+    preview: "/projects/daility-preview.png",
   },
   // {
   //   title: "Docsy",

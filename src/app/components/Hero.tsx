@@ -17,57 +17,51 @@ const Hero: React.FC = () => {
         <p className="text-base text-[var(--foreground)]">
           <CustomTooltip
             text="frontend"
-            content="React, Next.js, Vite, Tailwind, TypeScript, TurboRepo"
+            content="React, Next.js, Vite, Turborepo, React Native, JavaScript, TypeScript, Tailwind, Shadcn/ui, Radix, Base UI"
           />
           ,{" "}
           <CustomTooltip
             text="backend"
-            content="Node.js, Express, Fastify, Bun, Elisya, DrizzleORM, Prisma, MongoDB, PostgreSQL, Neon Database, Better-auth, "
+            content="Node.js, Bun, NestJS, Express, Drizzle, Prisma, Supabase, MongoDB, PostgreSQL, APIs RESTful, Webhooks, OAuth, Server Actions"
+          />
+          ,{" "}
+          <CustomTooltip
+            text="tools"
+            content="Git, GitHub, Docker, Vercel, Figma, Visual Studio Code, Stripe, CI/CD, Vitest, Jest"
           />
           ,{" "}
           <CustomTooltip
             text="ai"
             content="TensorFlow, PyTorch, LangChain, Hugging Face"
           />
-          , <CustomTooltip text="libs" content="BaseUI, Bun" /> — whatever gets
-          the job done.
+          — whatever gets the job done.
         </p>
 
         <p className="mb-4 text-base text-[var(--foreground)]">
-          i also launched the{" "}
+          i launched the{" "}
           <CustomTooltip
-            href="https://retroui.io"
+            href="https://helpmind.com.br"
             text="HelpMind"
-            content="A retro-inspired UI component library for React applications"
+            content="online platform for psychologists with scheduling, sessions, and insights."
           />
           . <br />
-          3k downloads in 2 days. felt good.
+          {/* 3k downloads in 2 days. felt good. */}
         </p>
 
         <p className="text-base text-[var(--foreground)]">
-          was a{" "}
-          <CustomTooltip
-            text="github octern"
-            content="program for open source contribution and development"
-          />
-          . did devrel at{" "}
-          <CustomTooltip
-            href="#"
-            text="appwrite"
-            content="an open source Backend as a Service (BaaS) platform"
-          />
-          . <br />i participated in meetups, wrote articles, submitted projects.{" "}
+          i’ve also won a few{" "}
+          <CustomTooltip text="hackathons" imageUrl="/hackhaton-preview.png" />
+          <br />
+          participated in events, wrote articles, and created projects.{" "}
         </p>
 
         <p className="mb-4 text-base text-[var(--foreground)]">
-          also vibed with devs at{" "}
+          also coding in{" "}
           <CustomTooltip
-            text="solana fellowship"
+            href="https://github.com/caezarff"
+            text="caezarLabs"
             content={
-              <span>
-                A 6-week developer program focused on building projects using
-                Solana blockchain technology.
-              </span>
+              <span>my lab for creating components, animations and ideas</span>
             }
           />
           .
@@ -78,7 +72,7 @@ const Hero: React.FC = () => {
             SPECIALIZE IN:
           </div>
           <p className="text-base text-[var(--foreground)]">
-            complex dashboards, auth flows.
+            fullstack apps, sites, dashboards
             <br />
             and making tiny details that matter.
           </p>
@@ -88,17 +82,17 @@ const Hero: React.FC = () => {
           offline, i play{" "}
           <CustomTooltip
             text="skate"
-            content="playing since high school in competitive leagues"
-            imageUrl="/projects/retroui-preview.png"
+            // content="playing skate."
+            imageUrl="/skate.jpg"
           />
           .
         </span>
       </div>
       <div className="flex gap-5 mt-8">
-        <SocialLink href="https://x.com/duckwhocodes" label="X" />
-        <SocialLink href="https://github.com/Dksie09" label="GitHub" />
+        <SocialLink href="https://x.com/julius___C" label="X" />
+        <SocialLink href="https://github.com/juliuscaezarff" label="GitHub" />
         <SocialLink
-          href="https://www.linkedin.com/in/dakshi-goel/"
+          href="https://www.linkedin.com/in/julius-caezar/"
           label="LinkedIn"
         />
       </div>

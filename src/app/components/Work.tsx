@@ -176,30 +176,30 @@ const CollaborationLogos: React.FC = () => {
       website: "https://thevorld.com/",
       zIndex: 40,
     },
-    {
-      name: "PCG",
-      logo: "/companies/pcg.png",
-      website: "https://powerclubglobal.com/",
-      zIndex: 30,
-    },
-    {
-      name: "Avocado",
-      logo: "/companies/avocado.jpg",
-      website: "https://instadapp.io/product/avocado",
-      zIndex: 20,
-    },
-    {
-      name: "Codedamn",
-      logo: "/companies/codedamn.jpg",
-      website: "https://codedamn.com/",
-      zIndex: 10,
-    },
+    // {
+    //   name: "PCG",
+    //   logo: "/companies/pcg.png",
+    //   website: "https://powerclubglobal.com/",
+    //   zIndex: 30,
+    // },
+    // {
+    //   name: "Avocado",
+    //   logo: "/companies/avocado.jpg",
+    //   website: "https://instadapp.io/product/avocado",
+    //   zIndex: 20,
+    // },
+    // {
+    //   name: "Codedamn",
+    //   logo: "/companies/codedamn.jpg",
+    //   website: "https://codedamn.com/",
+    //   zIndex: 10,
+    // },
   ];
 
   return (
     <div className="mb-8">
       <p className="text-xs text-[var(--muted-foreground)] mb-3">
-        also worked with folks at
+        also worked at
       </p>
       <div className="flex items-center">
         <div className="relative flex">
@@ -222,47 +222,31 @@ const Work: React.FC = () => {
   // Work experience data structured in an array
   const workExperiences = [
     {
-      company: "Shieldify",
-      position: "Frontend Engineering Intern",
-      logo: "/companies/shieldify.png",
-      website: "https://shieldify.com/",
+      company: "Arete",
+      position: "Design Engineer",
+      logo: "/companies/arete.png",
+      website: "https://www.ostudioarete.com.br/",
       description: [
-        "Built customer onboarding dashboard, implemented reporting a chargeback flow.",
-        "Created blogs in marketing website, integrated headless CMS for blog management.",
+        "Designed and developed client websites end-to-end, including email automation.",
+        <>
+          Built{" "}
+          <LinkWithTooltip
+            href="https://www.ostudioarete.com.br/"
+            text="Arete's"
+          />{" "}
+          own website as part of the studio's launch.
+        </>,
       ],
     },
     {
-      company: "Appwrite",
-      position: "Developer Advocate Intern",
-      logo: "/companies/appwrite.png",
-      website: "https://appwrite.io/",
+      company: "Synapx Tech",
+      position: "Full Stack Developer",
+      logo: "/companies/synapx.jpg",
+      website: "https://synapx.tech/",
       description: [
-        <>
-          Contributed to Appwrite&apos;s official documentation on{" "}
-          <LinkWithTooltip
-            href="https://github.com/appwrite/website/pull/138"
-            text="OAuth integration"
-          />
-        </>,
-        <>
-          Worked on a{" "}
-          <LinkWithTooltip
-            href="https://github.com/appwrite/awesome-appwrite/pull/498"
-            text="full stack website"
-          />{" "}
-          with Appwrite, made a{" "}
-          <LinkWithTooltip
-            href="https://duckshie.notion.site/Building-Jobwrite-A-Smart-Job-Search-Platform-using-React-and-Appwrite-21f98b37c7054af3917df6ef1ff1c522"
-            text="blog"
-          />{" "}
-          and{" "}
-          <LinkWithTooltip
-            href="https://www.youtube.com/watch?v=9z_Rz-13Hm0"
-            text="video"
-          />{" "}
-          tutorial.
-        </>,
-        "Organized developer meetup in Delhi, hands-on session on OAuth2 architecture.",
+        "Built and designed websites for clients, focusing on performance and usability.",
+        "Integrated analytics and lead capture systems to improve client conversion.",
+        "Developed AI automation agents to streamline workflows and user interactions.",
       ],
     },
   ];

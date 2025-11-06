@@ -1,12 +1,14 @@
 import React from "react";
+import { TextLoop } from "./ui/TextLoop";
 
 export default function Footer() {
   return (
-    <footer className="w-full text-white">
-      <div className="container mx-auto text-center">
-        <p className="text-base font-normal text-neutral-800">
-          #NeverStopLearning
-        </p>
+    <footer className="w-full py-6">
+      <div className="mx-auto text-center">
+        <TextLoop className="text-sm font-normal text-[var(--muted-foreground)]">
+          <span>© 2025 Julius Caezar.</span>
+          <span>Never Stop Learning</span>
+        </TextLoop>
       </div>
     </footer>
   );

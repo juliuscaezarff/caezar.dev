@@ -42,14 +42,7 @@ function Header() {
     <div>
       <div className="flex justify-between items-center p-3 w-full z-20">
         <div className="flex items-center">
-          {/* <div className="text-base text-[var(--primary)]">Julius Caezar</div> */}
-          <Image
-            src="/obby-logo-transparent.webp"
-            alt="Julius Caezar"
-            width={32}
-            height={32}
-            // className="mr-2"
-          />
+          <div className="text-base text-[var(--primary)]">Julius Caezar</div>
         </div>
 
         <div className="flex items-center gap-4">
@@ -68,7 +61,7 @@ function Header() {
         </div>
       </div>
 
-      {/* <hr className="border-t border-[var(--border)] relative w-screen left-[50%] right-[50%] -translate-x-[50%]" /> */}
+      <hr className="border-t border-dotted relative w-screen left-[50%] right-[50%] -translate-x-[50%]" />
     </div>
   );
 }
