@@ -1,40 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-import { Moon, Sun } from "lucide-react";
 import { useTheme } from "../theme-provider";
 import { MoonIcon } from "./ui/icons/moon";
 import { SunIcon } from "./ui/icons/sun";
-import Image from "next/image";
 
 function Header() {
   const { theme, setTheme } = useTheme();
 
-  // Add effect to handle theme transition
-  useEffect(() => {
-    // Add transition class to body when component mounts
-    document.documentElement.classList.add("theme-transition");
-
-    // Remove transition after changes are complete to prevent unwanted transitions
-    const handleTransitionEnd = () => {
-      document.documentElement.classList.remove("theme-transition");
-    };
-
-    document.documentElement.addEventListener(
-      "transitionend",
-      handleTransitionEnd
-    );
-
-    return () => {
-      document.documentElement.removeEventListener(
-        "transitionend",
-        handleTransitionEnd
-      );
-    };
-  }, []);
-
-  // Add transition class before theme change and remove it after
   const handleThemeChange = () => {
-    document.documentElement.classList.add("theme-transition");
     setTheme(theme === "light" ? "dark" : "light");
   };
 
@@ -46,7 +19,6 @@ function Header() {
         </div>
 
         <div className="flex items-center gap-4">
-          {/* Theme Toggle */}
           <button
             onClick={handleThemeChange}
             className="p-2 rounded-md bg-transparent hover:bg-[var(--accent)] transition-colors"
